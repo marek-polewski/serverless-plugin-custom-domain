@@ -38,11 +38,11 @@ module.exports = class CustomDomain {
       const domainName = this.getDomainName(domain);
       const basePath = this.getBasePath(domain);
       const deploymentId = this.getApiGatewayDeploymentId();
-      const apiGatewayId = this.getApiGatewayId();
 
       console.log('deployent', deploymentId);
       if (deploymentId) {
         const stage = this.getApiGatewayStage(deploymentId);
+        const apiGatewayId = this.getApiGatewayId(deploymentId);
         const dependencies = [deploymentId];
 
         console.log('stage', stage);
