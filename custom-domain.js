@@ -58,9 +58,7 @@ module.exports = class CustomDomain {
               DomainName: domainName,
               BasePath: basePath,
               Stage: stage.name,
-              RestApi: {
-                Ref: apiGatewayId
-              }
+              RestApi: apiGatewayId
             },
             dependencies
           },
